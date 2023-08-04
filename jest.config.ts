@@ -10,15 +10,15 @@ const swcConfig: SWCConfig = {
     sourceMaps: true,
     jsc: {
         preserveAllComments: true,
-        // parser: {
-        //   syntax: 'typescript',
-        //   tsx: true,
-        // },
-        // transform: {
-        //   react: {
-        //     runtime: 'automatic',
-        //   },
-        // },
+        parser: {
+          syntax: 'typescript',
+          tsx: true,
+        },
+        transform: {
+          react: {
+            runtime: 'automatic',
+          },
+        },
     },
 };
 
@@ -28,8 +28,8 @@ const config: JestConfig = {
     transform: {
         // '^.+\\.(ts|tsx)?$': 'ts-jest',
         // '^.+\\.(js|jsx)$': 'babel-jest',
-        // '^.+\\.(t|j)sx?$': ['@swc/jest', swcConfig as Record<string, unknown>],
-        '^.+\\.(t|j)sx?$': '@swc/jest',
+        '^.+\\.(t|j)sx?$': ['@swc/jest', swcConfig as Record<string, unknown>],
+        // '^.+\\.(t|j)sx?$': '@swc/jest',
     },
     rootDir: './',
     collectCoverage: true,

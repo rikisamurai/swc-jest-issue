@@ -1,0 +1,15 @@
+{
+  "sourceMaps": true,
+  "jsc": {
+    "preserveAllComments": true,
+    "parser": {
+      "syntax": "typescript",
+      "tsx": true
+    },
+    "transform": {
+      "react": {
+        "runtime": "automatic"
+      }
+    }
+  }
+}
